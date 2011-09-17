@@ -1,0 +1,265 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8A52D1101424B36E00854CC0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A52D10F1424B36E00854CC0 /* UIKit.framework */; };
+		8A52D1121424B36E00854CC0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A52D1111424B36E00854CC0 /* Foundation.framework */; };
+		8A52D1141424B36E00854CC0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A52D1131424B36E00854CC0 /* CoreGraphics.framework */; };
+		8A52D11A1424B36E00854CC0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8A52D1181424B36E00854CC0 /* InfoPlist.strings */; };
+		8A52D11C1424B36E00854CC0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A52D11B1424B36E00854CC0 /* main.m */; };
+		8A52D1201424B36E00854CC0 /* SimpleSynthAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A52D11F1424B36E00854CC0 /* SimpleSynthAppDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8A52D10B1424B36E00854CC0 /* SimpleSynth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleSynth.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A52D10F1424B36E00854CC0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8A52D1111424B36E00854CC0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8A52D1131424B36E00854CC0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8A52D1171424B36E00854CC0 /* SimpleSynth-Info.plist */ = {isa = PBXFileReference; path = "SimpleSynth-Info.plist"; sourceTree = "<group>"; };
+		8A52D1191424B36E00854CC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8A52D11B1424B36E00854CC0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8A52D11D1424B36E00854CC0 /* SimpleSynth-Prefix.pch */ = {isa = PBXFileReference; path = "SimpleSynth-Prefix.pch"; sourceTree = "<group>"; };
+		8A52D11E1424B36E00854CC0 /* SimpleSynthAppDelegate.h */ = {isa = PBXFileReference; path = SimpleSynthAppDelegate.h; sourceTree = "<group>"; };
+		8A52D11F1424B36E00854CC0 /* SimpleSynthAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleSynthAppDelegate.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8A52D1081424B36E00854CC0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A52D1101424B36E00854CC0 /* UIKit.framework in Frameworks */,
+				8A52D1121424B36E00854CC0 /* Foundation.framework in Frameworks */,
+				8A52D1141424B36E00854CC0 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8A52D1001424B36D00854CC0 = {
+			isa = PBXGroup;
+			children = (
+				8A52D1151424B36E00854CC0 /* SimpleSynth */,
+				8A52D10E1424B36E00854CC0 /* Frameworks */,
+				8A52D10C1424B36E00854CC0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8A52D10C1424B36E00854CC0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8A52D10B1424B36E00854CC0 /* SimpleSynth.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8A52D10E1424B36E00854CC0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8A52D10F1424B36E00854CC0 /* UIKit.framework */,
+				8A52D1111424B36E00854CC0 /* Foundation.framework */,
+				8A52D1131424B36E00854CC0 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8A52D1151424B36E00854CC0 /* SimpleSynth */ = {
+			isa = PBXGroup;
+			children = (
+				8A52D11E1424B36E00854CC0 /* SimpleSynthAppDelegate.h */,
+				8A52D11F1424B36E00854CC0 /* SimpleSynthAppDelegate.m */,
+				8A52D1161424B36E00854CC0 /* Supporting Files */,
+			);
+			path = SimpleSynth;
+			sourceTree = "<group>";
+		};
+		8A52D1161424B36E00854CC0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8A52D1171424B36E00854CC0 /* SimpleSynth-Info.plist */,
+				8A52D1181424B36E00854CC0 /* InfoPlist.strings */,
+				8A52D11B1424B36E00854CC0 /* main.m */,
+				8A52D11D1424B36E00854CC0 /* SimpleSynth-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8A52D10A1424B36E00854CC0 /* SimpleSynth */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A52D1231424B36E00854CC0 /* Build configuration list for PBXNativeTarget "SimpleSynth" */;
+			buildPhases = (
+				8A52D1071424B36E00854CC0 /* Sources */,
+				8A52D1081424B36E00854CC0 /* Frameworks */,
+				8A52D1091424B36E00854CC0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimpleSynth;
+			productName = SimpleSynth;
+			productReference = 8A52D10B1424B36E00854CC0 /* SimpleSynth.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8A52D1021424B36D00854CC0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Extessy AG";
+			};
+			buildConfigurationList = 8A52D1051424B36D00854CC0 /* Build configuration list for PBXProject "SimpleSynth" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8A52D1001424B36D00854CC0;
+			productRefGroup = 8A52D10C1424B36E00854CC0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8A52D10A1424B36E00854CC0 /* SimpleSynth */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8A52D1091424B36E00854CC0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A52D11A1424B36E00854CC0 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8A52D1071424B36E00854CC0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A52D11C1424B36E00854CC0 /* main.m in Sources */,
+				8A52D1201424B36E00854CC0 /* SimpleSynthAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8A52D1181424B36E00854CC0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A52D1191424B36E00854CC0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8A52D1211424B36E00854CC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8A52D1221424B36E00854CC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8A52D1241424B36E00854CC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SimpleSynth/SimpleSynth-Prefix.pch";
+				INFOPLIST_FILE = "SimpleSynth/SimpleSynth-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8A52D1251424B36E00854CC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SimpleSynth/SimpleSynth-Prefix.pch";
+				INFOPLIST_FILE = "SimpleSynth/SimpleSynth-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8A52D1051424B36D00854CC0 /* Build configuration list for PBXProject "SimpleSynth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A52D1211424B36E00854CC0 /* Debug */,
+				8A52D1221424B36E00854CC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A52D1231424B36E00854CC0 /* Build configuration list for PBXNativeTarget "SimpleSynth" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A52D1241424B36E00854CC0 /* Debug */,
+				8A52D1251424B36E00854CC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8A52D1021424B36D00854CC0 /* Project object */;
+}
