@@ -1,0 +1,4 @@
+[submodule "Utils/libmidi"]
+	path = Utils/libmidi
+	url = https://github.com/kkrizka/libmidi.git
+  ignore = all
