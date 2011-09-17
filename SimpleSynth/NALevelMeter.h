@@ -3,11 +3,26 @@
 //  SimpleSynth
 //
 //  Created by Boris Bügling on 17.09.11.
-//  Copyright 2011 Extessy AG. All rights reserved.
+//  Copyright 2011 - All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <AudioToolbox/AudioToolbox.h>
 
-@interface NALevelMeter : NSObject
+@protocol NALevelMeterDelegate
+
+-(void)peakPowerChangedTo:(float)peakPower;
+
+@end
+
+
+@interface NALevelMeter : NSObject 
+{
+    @public Float32 peakPowers[2];
+}
+
+@property (nonatomic, assign) id <NALevelMeterDelegate> delegate;
+@property (nonatomic, readonly) AURenderCallback renderCallback;
+
+- (float)peakPowerForChannel:(NSInteger)channelNumber;
 
 @end

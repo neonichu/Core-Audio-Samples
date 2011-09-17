@@ -13,6 +13,21 @@
 		8A52D11A1424B36E00854CC0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8A52D1181424B36E00854CC0 /* InfoPlist.strings */; };
 		8A52D11C1424B36E00854CC0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A52D11B1424B36E00854CC0 /* main.m */; };
 		8A52D1201424B36E00854CC0 /* SimpleSynthAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A52D11F1424B36E00854CC0 /* SimpleSynthAppDelegate.m */; };
+		8A52D12A1424B79B00854CC0 /* NNKeyboardVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A52D1291424B79B00854CC0 /* NNKeyboardVC.m */; };
+		8A52D1301424C4DF00854CC0 /* ButtonHighlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A52D12F1424C4DF00854CC0 /* ButtonHighlighted.png */; };
+		8A52D1331424C77F00854CC0 /* SynthController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A52D1321424C77F00854CC0 /* SynthController.m */; };
+		8A52D13A1424C91100854CC0 /* NASession.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A52D1391424C91100854CC0 /* NASession.m */; };
+		8A52D13D1424C92A00854CC0 /* NANode.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A52D13C1424C92A00854CC0 /* NANode.m */; };
+		8A52D1411424C95A00854CC0 /* NARemoteIO.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A52D1401424C95A00854CC0 /* NARemoteIO.m */; };
+		8A52D1441424C96B00854CC0 /* NASineWave.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A52D1431424C96B00854CC0 /* NASineWave.m */; };
+		8A52D1471424C97D00854CC0 /* NAReverbEffect.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A52D1461424C97D00854CC0 /* NAReverbEffect.m */; };
+		8A52D14B1424C9A800854CC0 /* NACallback.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A52D14A1424C9A800854CC0 /* NACallback.m */; };
+		8A52D14E1424C9B800854CC0 /* NADescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A52D14D1424C9B800854CC0 /* NADescription.m */; };
+		8A52D1511424C9C800854CC0 /* NALevelMeter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A52D1501424C9C800854CC0 /* NALevelMeter.m */; };
+		8A52D1541424C9DB00854CC0 /* NAMIDI.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A52D1531424C9DB00854CC0 /* NAMIDI.m */; };
+		8A52D1571424C9F000854CC0 /* NARecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A52D1561424C9F000854CC0 /* NARecorder.m */; };
+		8A52D15A1424C9FC00854CC0 /* NAUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A52D1591424C9FC00854CC0 /* NAUtils.m */; };
+		8A979A481424CF9B0012638A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A979A471424CF9B0012638A /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +35,41 @@
 		8A52D10F1424B36E00854CC0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8A52D1111424B36E00854CC0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8A52D1131424B36E00854CC0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		8A52D1171424B36E00854CC0 /* SimpleSynth-Info.plist */ = {isa = PBXFileReference; path = "SimpleSynth-Info.plist"; sourceTree = "<group>"; };
+		8A52D1171424B36E00854CC0 /* SimpleSynth-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SimpleSynth-Info.plist"; sourceTree = "<group>"; };
 		8A52D1191424B36E00854CC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		8A52D11B1424B36E00854CC0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		8A52D11D1424B36E00854CC0 /* SimpleSynth-Prefix.pch */ = {isa = PBXFileReference; path = "SimpleSynth-Prefix.pch"; sourceTree = "<group>"; };
-		8A52D11E1424B36E00854CC0 /* SimpleSynthAppDelegate.h */ = {isa = PBXFileReference; path = SimpleSynthAppDelegate.h; sourceTree = "<group>"; };
+		8A52D11B1424B36E00854CC0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = main.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		8A52D11D1424B36E00854CC0 /* SimpleSynth-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimpleSynth-Prefix.pch"; sourceTree = "<group>"; };
+		8A52D11E1424B36E00854CC0 /* SimpleSynthAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleSynthAppDelegate.h; sourceTree = "<group>"; };
 		8A52D11F1424B36E00854CC0 /* SimpleSynthAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleSynthAppDelegate.m; sourceTree = "<group>"; };
+		8A52D1281424B79B00854CC0 /* NNKeyboardVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = NNKeyboardVC.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		8A52D1291424B79B00854CC0 /* NNKeyboardVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NNKeyboardVC.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		8A52D12F1424C4DF00854CC0 /* ButtonHighlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonHighlighted.png; sourceTree = "<group>"; };
+		8A52D1311424C77F00854CC0 /* SynthController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthController.h; sourceTree = "<group>"; };
+		8A52D1321424C77F00854CC0 /* SynthController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SynthController.m; sourceTree = "<group>"; };
+		8A52D1381424C91100854CC0 /* NASession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = NASession.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		8A52D1391424C91100854CC0 /* NASession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NASession.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		8A52D13B1424C92A00854CC0 /* NANode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = NANode.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		8A52D13C1424C92A00854CC0 /* NANode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NANode.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		8A52D13F1424C95A00854CC0 /* NARemoteIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = NARemoteIO.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		8A52D1401424C95A00854CC0 /* NARemoteIO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NARemoteIO.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		8A52D1421424C96B00854CC0 /* NASineWave.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = NASineWave.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		8A52D1431424C96B00854CC0 /* NASineWave.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NASineWave.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		8A52D1451424C97D00854CC0 /* NAReverbEffect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = NAReverbEffect.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		8A52D1461424C97D00854CC0 /* NAReverbEffect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NAReverbEffect.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		8A52D1491424C9A800854CC0 /* NACallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = NACallback.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		8A52D14A1424C9A800854CC0 /* NACallback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NACallback.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		8A52D14C1424C9B800854CC0 /* NADescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = NADescription.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		8A52D14D1424C9B800854CC0 /* NADescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NADescription.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		8A52D14F1424C9C800854CC0 /* NALevelMeter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = NALevelMeter.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		8A52D1501424C9C800854CC0 /* NALevelMeter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NALevelMeter.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		8A52D1521424C9DB00854CC0 /* NAMIDI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = NAMIDI.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		8A52D1531424C9DB00854CC0 /* NAMIDI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NAMIDI.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		8A52D1551424C9F000854CC0 /* NARecorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = NARecorder.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		8A52D1561424C9F000854CC0 /* NARecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NARecorder.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		8A52D1581424C9FC00854CC0 /* NAUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = NAUtils.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		8A52D1591424C9FC00854CC0 /* NAUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NAUtils.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		8A979A471424CF9B0012638A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		8A979A4A1424D0320012638A /* NNAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNAudio.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,9 +77,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A52D1101424B36E00854CC0 /* UIKit.framework in Frameworks */,
-				8A52D1121424B36E00854CC0 /* Foundation.framework in Frameworks */,
+				8A979A481424CF9B0012638A /* AudioToolbox.framework in Frameworks */,
 				8A52D1141424B36E00854CC0 /* CoreGraphics.framework in Frameworks */,
+				8A52D1121424B36E00854CC0 /* Foundation.framework in Frameworks */,
+				8A52D1101424B36E00854CC0 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,9 +107,10 @@
 		8A52D10E1424B36E00854CC0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8A52D10F1424B36E00854CC0 /* UIKit.framework */,
-				8A52D1111424B36E00854CC0 /* Foundation.framework */,
+				8A979A471424CF9B0012638A /* AudioToolbox.framework */,
 				8A52D1131424B36E00854CC0 /* CoreGraphics.framework */,
+				8A52D1111424B36E00854CC0 /* Foundation.framework */,
+				8A52D10F1424B36E00854CC0 /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -72,8 +118,14 @@
 		8A52D1151424B36E00854CC0 /* SimpleSynth */ = {
 			isa = PBXGroup;
 			children = (
+				8A52D1281424B79B00854CC0 /* NNKeyboardVC.h */,
+				8A52D1291424B79B00854CC0 /* NNKeyboardVC.m */,
 				8A52D11E1424B36E00854CC0 /* SimpleSynthAppDelegate.h */,
 				8A52D11F1424B36E00854CC0 /* SimpleSynthAppDelegate.m */,
+				8A52D1311424C77F00854CC0 /* SynthController.h */,
+				8A52D1321424C77F00854CC0 /* SynthController.m */,
+				8A52D1261424B39600854CC0 /* NNAudio */,
+				8A52D1271424B74500854CC0 /* Resources */,
 				8A52D1161424B36E00854CC0 /* Supporting Files */,
 			);
 			path = SimpleSynth;
@@ -88,6 +140,60 @@
 				8A52D11D1424B36E00854CC0 /* SimpleSynth-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8A52D1261424B39600854CC0 /* NNAudio */ = {
+			isa = PBXGroup;
+			children = (
+				8A52D1481424C98C00854CC0 /* Utils */,
+				8A52D13E1424C93800854CC0 /* Units */,
+				8A52D1521424C9DB00854CC0 /* NAMIDI.h */,
+				8A52D1531424C9DB00854CC0 /* NAMIDI.m */,
+				8A52D1381424C91100854CC0 /* NASession.h */,
+				8A52D1391424C91100854CC0 /* NASession.m */,
+				8A979A4A1424D0320012638A /* NNAudio.h */,
+			);
+			name = NNAudio;
+			sourceTree = "<group>";
+		};
+		8A52D1271424B74500854CC0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8A52D12F1424C4DF00854CC0 /* ButtonHighlighted.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		8A52D13E1424C93800854CC0 /* Units */ = {
+			isa = PBXGroup;
+			children = (
+				8A52D13B1424C92A00854CC0 /* NANode.h */,
+				8A52D13C1424C92A00854CC0 /* NANode.m */,
+				8A52D13F1424C95A00854CC0 /* NARemoteIO.h */,
+				8A52D1401424C95A00854CC0 /* NARemoteIO.m */,
+				8A52D1451424C97D00854CC0 /* NAReverbEffect.h */,
+				8A52D1461424C97D00854CC0 /* NAReverbEffect.m */,
+				8A52D1421424C96B00854CC0 /* NASineWave.h */,
+				8A52D1431424C96B00854CC0 /* NASineWave.m */,
+			);
+			name = Units;
+			sourceTree = "<group>";
+		};
+		8A52D1481424C98C00854CC0 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				8A52D1491424C9A800854CC0 /* NACallback.h */,
+				8A52D14A1424C9A800854CC0 /* NACallback.m */,
+				8A52D14C1424C9B800854CC0 /* NADescription.h */,
+				8A52D14D1424C9B800854CC0 /* NADescription.m */,
+				8A52D14F1424C9C800854CC0 /* NALevelMeter.h */,
+				8A52D1501424C9C800854CC0 /* NALevelMeter.m */,
+				8A52D1551424C9F000854CC0 /* NARecorder.h */,
+				8A52D1561424C9F000854CC0 /* NARecorder.m */,
+				8A52D1581424C9FC00854CC0 /* NAUtils.h */,
+				8A52D1591424C9FC00854CC0 /* NAUtils.m */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A52D11A1424B36E00854CC0 /* InfoPlist.strings in Resources */,
+				8A52D1301424C4DF00854CC0 /* ButtonHighlighted.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +260,19 @@
 			files = (
 				8A52D11C1424B36E00854CC0 /* main.m in Sources */,
 				8A52D1201424B36E00854CC0 /* SimpleSynthAppDelegate.m in Sources */,
+				8A52D12A1424B79B00854CC0 /* NNKeyboardVC.m in Sources */,
+				8A52D1331424C77F00854CC0 /* SynthController.m in Sources */,
+				8A52D13A1424C91100854CC0 /* NASession.m in Sources */,
+				8A52D13D1424C92A00854CC0 /* NANode.m in Sources */,
+				8A52D1411424C95A00854CC0 /* NARemoteIO.m in Sources */,
+				8A52D1441424C96B00854CC0 /* NASineWave.m in Sources */,
+				8A52D1471424C97D00854CC0 /* NAReverbEffect.m in Sources */,
+				8A52D14B1424C9A800854CC0 /* NACallback.m in Sources */,
+				8A52D14E1424C9B800854CC0 /* NADescription.m in Sources */,
+				8A52D1511424C9C800854CC0 /* NALevelMeter.m in Sources */,
+				8A52D1541424C9DB00854CC0 /* NAMIDI.m in Sources */,
+				8A52D1571424C9F000854CC0 /* NARecorder.m in Sources */,
+				8A52D15A1424C9FC00854CC0 /* NAUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,6 +343,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SimpleSynth/SimpleSynth-Prefix.pch";
 				INFOPLIST_FILE = "SimpleSynth/SimpleSynth-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -234,6 +355,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SimpleSynth/SimpleSynth-Prefix.pch";
 				INFOPLIST_FILE = "SimpleSynth/SimpleSynth-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -258,6 +380,7 @@
 				8A52D1251424B36E00854CC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

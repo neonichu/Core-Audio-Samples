@@ -3,9 +3,10 @@
 //  SimpleSynth
 //
 //  Created by Boris Bügling on 17.09.11.
-//  Copyright 2011 Extessy AG. All rights reserved.
+//  Copyright 2011 - All rights reserved.
 //
 
+#import "NNKeyboardVC.h"
 #import "SimpleSynthAppDelegate.h"
 
 @implementation SimpleSynthAppDelegate
@@ -14,9 +15,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self.window makeKeyAndVisible];
+    
+    self.window.rootViewController = [[NNKeyboardVC alloc] init];
+    self.window.rootViewController.view.frame = [[UIScreen mainScreen] applicationFrame];
+    
     return YES;
 }
 
