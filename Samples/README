@@ -1,0 +1,5 @@
+The samples used by this app are from FluidR3_GM.sf2, see COPYING for
+the licensing information.
+
+You can obtain it from http://www.musescore.org/download/fluid-soundfont.tar.gz
+and extract/convert it to CAF by using the provided scripts.

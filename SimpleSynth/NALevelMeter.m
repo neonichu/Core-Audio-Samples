@@ -2,7 +2,7 @@
 //  NALevelMeter.m
 //  SimpleSynth
 //
-//  Created by Boris Bügling on 17.09.11.
+//  Created by Boris Bügling on 17.06.11.
 //
 //  Source: http://www.politepix.com/2010/06/18/decibel-metering-from-an-iphone-audio-unit/
 //

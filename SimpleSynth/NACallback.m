@@ -2,7 +2,7 @@
 //  NACallback.m
 //  SimpleSynth
 //
-//  Created by Boris Bügling on 17.09.11.
+//  Created by Boris Bügling on 17.06.11.
 //  Copyright 2011 - All rights reserved.
 //
 
@@ -10,14 +10,9 @@
 
 @implementation NACallback
 
-- (id)init
-{
-    self = [super init];
-    if (self) {
-        // Initialization code here.
-    }
-    
-    return self;
-}
+@synthesize busNumber;
+@synthesize callbackType;
+@synthesize graph;
+@synthesize renderCallbackStruct;
 
 @end

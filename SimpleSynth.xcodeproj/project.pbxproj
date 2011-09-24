@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A067736142DECF200AB5B24 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A067735142DECF200AB5B24 /* AVFoundation.framework */; };
 		8A52D1101424B36E00854CC0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A52D10F1424B36E00854CC0 /* UIKit.framework */; };
 		8A52D1121424B36E00854CC0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A52D1111424B36E00854CC0 /* Foundation.framework */; };
 		8A52D1141424B36E00854CC0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A52D1131424B36E00854CC0 /* CoreGraphics.framework */; };
@@ -28,9 +29,11 @@
 		8A52D1571424C9F000854CC0 /* NARecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A52D1561424C9F000854CC0 /* NARecorder.m */; };
 		8A52D15A1424C9FC00854CC0 /* NAUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A52D1591424C9FC00854CC0 /* NAUtils.m */; };
 		8A979A481424CF9B0012638A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A979A471424CF9B0012638A /* AudioToolbox.framework */; };
+		8A979A511424FC280012638A /* NAMixer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A979A501424FC280012638A /* NAMixer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8A067735142DECF200AB5B24 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		8A52D10B1424B36E00854CC0 /* SimpleSynth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleSynth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A52D10F1424B36E00854CC0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		8A52D1111424B36E00854CC0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -39,13 +42,13 @@
 		8A52D1191424B36E00854CC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8A52D11B1424B36E00854CC0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = main.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		8A52D11D1424B36E00854CC0 /* SimpleSynth-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimpleSynth-Prefix.pch"; sourceTree = "<group>"; };
-		8A52D11E1424B36E00854CC0 /* SimpleSynthAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleSynthAppDelegate.h; sourceTree = "<group>"; };
-		8A52D11F1424B36E00854CC0 /* SimpleSynthAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleSynthAppDelegate.m; sourceTree = "<group>"; };
+		8A52D11E1424B36E00854CC0 /* SimpleSynthAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SimpleSynthAppDelegate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		8A52D11F1424B36E00854CC0 /* SimpleSynthAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SimpleSynthAppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		8A52D1281424B79B00854CC0 /* NNKeyboardVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = NNKeyboardVC.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		8A52D1291424B79B00854CC0 /* NNKeyboardVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NNKeyboardVC.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		8A52D12F1424C4DF00854CC0 /* ButtonHighlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ButtonHighlighted.png; sourceTree = "<group>"; };
-		8A52D1311424C77F00854CC0 /* SynthController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthController.h; sourceTree = "<group>"; };
-		8A52D1321424C77F00854CC0 /* SynthController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SynthController.m; sourceTree = "<group>"; };
+		8A52D1311424C77F00854CC0 /* SynthController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SynthController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		8A52D1321424C77F00854CC0 /* SynthController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = SynthController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		8A52D1381424C91100854CC0 /* NASession.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = NASession.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		8A52D1391424C91100854CC0 /* NASession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NASession.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		8A52D13B1424C92A00854CC0 /* NANode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = NANode.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -69,7 +72,9 @@
 		8A52D1581424C9FC00854CC0 /* NAUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = NAUtils.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		8A52D1591424C9FC00854CC0 /* NAUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NAUtils.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		8A979A471424CF9B0012638A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		8A979A4A1424D0320012638A /* NNAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNAudio.h; sourceTree = "<group>"; };
+		8A979A4A1424D0320012638A /* NNAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = NNAudio.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		8A979A4F1424FC280012638A /* NAMixer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = NAMixer.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		8A979A501424FC280012638A /* NAMixer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NAMixer.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +83,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A979A481424CF9B0012638A /* AudioToolbox.framework in Frameworks */,
+				8A067736142DECF200AB5B24 /* AVFoundation.framework in Frameworks */,
 				8A52D1141424B36E00854CC0 /* CoreGraphics.framework in Frameworks */,
 				8A52D1121424B36E00854CC0 /* Foundation.framework in Frameworks */,
 				8A52D1101424B36E00854CC0 /* UIKit.framework in Frameworks */,
@@ -87,9 +93,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A067739142E12A800AB5B24 /* Samples */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Samples;
+			sourceTree = "<group>";
+		};
 		8A52D1001424B36D00854CC0 = {
 			isa = PBXGroup;
 			children = (
+				8A067735142DECF200AB5B24 /* AVFoundation.framework */,
 				8A52D1151424B36E00854CC0 /* SimpleSynth */,
 				8A52D10E1424B36E00854CC0 /* Frameworks */,
 				8A52D10C1424B36E00854CC0 /* Products */,
@@ -159,6 +173,7 @@
 		8A52D1271424B74500854CC0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8A067739142E12A800AB5B24 /* Samples */,
 				8A52D12F1424C4DF00854CC0 /* ButtonHighlighted.png */,
 			);
 			name = Resources;
@@ -167,6 +182,8 @@
 		8A52D13E1424C93800854CC0 /* Units */ = {
 			isa = PBXGroup;
 			children = (
+				8A979A4F1424FC280012638A /* NAMixer.h */,
+				8A979A501424FC280012638A /* NAMixer.m */,
 				8A52D13B1424C92A00854CC0 /* NANode.h */,
 				8A52D13C1424C92A00854CC0 /* NANode.m */,
 				8A52D13F1424C95A00854CC0 /* NARemoteIO.h */,
@@ -222,6 +239,7 @@
 		8A52D1021424B36D00854CC0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0420;
 				ORGANIZATIONNAME = "Extessy AG";
 			};
 			buildConfigurationList = 8A52D1051424B36D00854CC0 /* Build configuration list for PBXProject "SimpleSynth" */;
@@ -273,6 +291,7 @@
 				8A52D1541424C9DB00854CC0 /* NAMIDI.m in Sources */,
 				8A52D1571424C9F000854CC0 /* NARecorder.m in Sources */,
 				8A52D15A1424C9FC00854CC0 /* NAUtils.m in Sources */,
+				8A979A511424FC280012638A /* NAMixer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,8 +359,13 @@
 		8A52D1241424B36E00854CC0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SimpleSynth/SimpleSynth-Prefix.pch";
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
+				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_SHADOW = YES;
 				INFOPLIST_FILE = "SimpleSynth/SimpleSynth-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -352,8 +376,13 @@
 		8A52D1251424B36E00854CC0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SimpleSynth/SimpleSynth-Prefix.pch";
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
+				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_WARN_SHADOW = YES;
 				INFOPLIST_FILE = "SimpleSynth/SimpleSynth-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
