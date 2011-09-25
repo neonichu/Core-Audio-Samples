@@ -3,3 +3,5 @@ the licensing information.
 
 You can obtain it from http://www.musescore.org/download/fluid-soundfont.tar.gz
 and extract/convert it to CAF by using the provided scripts.
+
+The app uses the MIDI notes 60 - 71 (see http://www.phys.unsw.edu.au/jw/notes.html).

@@ -8,9 +8,9 @@
 
 #import "NNKeyboardVC.h"
 
-#define kBlackKeyOffset     100
-
 @implementation NNKeyboardVC
+
+@synthesize keyboard;
 
 #pragma mark - View lifecycle
 
@@ -67,6 +67,7 @@
 
 - (void)keyPressed:(UIButton*)button
 {
+    [self.keyboard pressKey:button.tag];
 }
 
 #pragma mark - Rotation

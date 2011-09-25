@@ -22,6 +22,6 @@ typedef struct {
 @interface NAUtils : NSObject
 
 + (BOOL)printErrorMessage:(NSString*)errorString withStatus:(OSStatus)result;
-+ (NASoundStructPtr)readAudioFile:(NSURL*)fileUrl sampleRate:(Float64)sampleRate;
++ (BOOL)readAudioFile:(NSURL*)fileUrl sampleRate:(Float64)sampleRate intoSoundStruct:(NASoundStructPtr)soundStruct;
 
 @end

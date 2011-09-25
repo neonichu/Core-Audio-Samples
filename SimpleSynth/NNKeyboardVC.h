@@ -8,5 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+#import "NNKeyboard.h"
+
 @interface NNKeyboardVC : UIViewController
+
+@property (nonatomic, assign) NNKeyboard* keyboard;
+
 @end

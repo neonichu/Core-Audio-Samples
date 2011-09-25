@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+#import "SynthController.h"
+
 @interface SimpleSynthAppDelegate : UIResponder <UIApplicationDelegate>
 
+@property (nonatomic, retain) SynthController* synthController;
 @property (strong, nonatomic) UIWindow *window;
 
 @end

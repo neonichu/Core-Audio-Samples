@@ -10,14 +10,18 @@
 
 @implementation NARemoteIO
 
-- (id)init
-{
-    self = [super init];
-    if (self) {
-        // Initialization code here.
-    }
-    
-    return self;
+#pragma mark -
+#pragma mark Initialize
+
+-(id)init {
+	self = [super initWithComponentType:kAudioUnitType_Output andComponentSubType:kAudioUnitSubType_RemoteIO];
+	return self;
+}
+
+#pragma mark -
+
+-(NSString*)description {
+	return [NSString stringWithFormat:@"I/O Unit (Node: %d, Unit: %d)", self.node, self.unit];
 }
 
 @end

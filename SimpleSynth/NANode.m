@@ -114,6 +114,7 @@
 
 -(BOOL)attachCallback:(AURenderCallback)renderCallback ofType:(NACallbackType)type toBus:(UInt32)busNumber 
 			  inGraph:(AUGraph)graph {
+    // TODO: Clear previous callback if necessary
 	AURenderCallbackStruct callbackStruct;
 	callbackStruct.inputProc = renderCallback;
 	callbackStruct.inputProcRefCon  = (__bridge void*)self;

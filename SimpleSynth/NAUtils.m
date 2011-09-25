@@ -46,9 +46,7 @@ static char *FormatError(char *str, OSStatus error) {
 	return YES;
 }
 
-+ (NASoundStructPtr)readAudioFile:(NSURL*)fileUrl sampleRate:(Float64)sampleRate {
-    NASoundStructPtr soundStruct = (NASoundStructPtr)malloc(sizeof(NASoundStructPtr));
-    
++ (BOOL)readAudioFile:(NSURL*)fileUrl sampleRate:(Float64)sampleRate intoSoundStruct:(NASoundStructPtr)soundStruct {
 	ExtAudioFileRef audioFileObject = 0;
 	
 	OSStatus result = ExtAudioFileOpenURL((__bridge CFURLRef)fileUrl, &audioFileObject);
@@ -190,7 +188,7 @@ static char *FormatError(char *str, OSStatus error) {
 	// Dispose of the extended audio file object, which also closes the associated file.
 	ExtAudioFileDispose (audioFileObject);
     
-	return soundStruct;
+	return YES;
 }
 
 @end

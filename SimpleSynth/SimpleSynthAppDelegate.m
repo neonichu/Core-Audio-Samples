@@ -11,6 +11,7 @@
 
 @implementation SimpleSynthAppDelegate
 
+@synthesize synthController;
 @synthesize window = _window;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -20,6 +21,9 @@
     
     self.window.rootViewController = [[NNKeyboardVC alloc] init];
     self.window.rootViewController.view.frame = [[UIScreen mainScreen] applicationFrame];
+    
+    self.synthController = [[SynthController alloc] init];
+    ((NNKeyboardVC*)self.window.rootViewController).keyboard = self.synthController.keyboard;
     
     return YES;
 }

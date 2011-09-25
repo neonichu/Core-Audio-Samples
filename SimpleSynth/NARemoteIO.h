@@ -6,8 +6,7 @@
 //  Copyright 2011 - All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "NANode.h"
 
-@interface NARemoteIO : NSObject
-
+@interface NARemoteIO : NANode
 @end
