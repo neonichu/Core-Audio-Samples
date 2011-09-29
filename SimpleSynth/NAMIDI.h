@@ -8,5 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+static NSString* kNAMIDINoteOnNotification = @"kNAMIDINoteOnNotification";
+static NSString* kNAMIDINotification = @"kNAMIDINotification";
+
+static NSString* kNAMIDI_NoteKey = @"kNAMIDI_NoteKey";
+static NSString* kNAMIDI_VelocityKey = @"kNAMIDI_VelocityKey";
+
 @interface NAMIDI : NSObject
 @end

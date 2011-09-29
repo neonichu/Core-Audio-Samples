@@ -10,4 +10,7 @@
 
 @interface NAReverbEffect : NSObject
 
+@property (nonatomic, assign) float cutoff;
+@property (nonatomic, assign) float resonance;
+
 @end

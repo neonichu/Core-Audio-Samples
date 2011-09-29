@@ -12,6 +12,7 @@
 @interface SynthController : NSObject
 
 @property (nonatomic, retain) NNKeyboard* keyboard;
+@property (nonatomic, retain) NAMIDI* midiHandler;
 @property (nonatomic, retain) NASession* session;
 
 @end

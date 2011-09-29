@@ -155,6 +155,7 @@
 		8A52D1541424C9DB00854CC0 /* NAMIDI.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A52D1531424C9DB00854CC0 /* NAMIDI.m */; };
 		8A52D1571424C9F000854CC0 /* NARecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A52D1561424C9F000854CC0 /* NARecorder.m */; };
 		8A52D15A1424C9FC00854CC0 /* NAUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A52D1591424C9FC00854CC0 /* NAUtils.m */; };
+		8A900F8214352997001C28D3 /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A900F8114352997001C28D3 /* CoreMIDI.framework */; };
 		8A979A481424CF9B0012638A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A979A471424CF9B0012638A /* AudioToolbox.framework */; };
 		8A979A511424FC280012638A /* NAMixer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A979A501424FC280012638A /* NAMixer.m */; };
 		8ABF0F36142F4A38000B95EE /* NNKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ABF0F35142F4A38000B95EE /* NNKeyboard.m */; };
@@ -326,6 +327,7 @@
 		8A52D1561424C9F000854CC0 /* NARecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NARecorder.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		8A52D1581424C9FC00854CC0 /* NAUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = NAUtils.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		8A52D1591424C9FC00854CC0 /* NAUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NAUtils.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		8A900F8114352997001C28D3 /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = System/Library/Frameworks/CoreMIDI.framework; sourceTree = SDKROOT; };
 		8A91853D142E3D44004AB122 /* NANode+Debug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NANode+Debug.h"; sourceTree = "<group>"; };
 		8A979A471424CF9B0012638A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		8A979A4A1424D0320012638A /* NNAudio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = NNAudio.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -343,6 +345,7 @@
 				8A979A481424CF9B0012638A /* AudioToolbox.framework in Frameworks */,
 				8A067736142DECF200AB5B24 /* AVFoundation.framework in Frameworks */,
 				8A52D1141424B36E00854CC0 /* CoreGraphics.framework in Frameworks */,
+				8A900F8214352997001C28D3 /* CoreMIDI.framework in Frameworks */,
 				8A52D1121424B36E00854CC0 /* Foundation.framework in Frameworks */,
 				8A52D1101424B36E00854CC0 /* UIKit.framework in Frameworks */,
 			);
@@ -508,6 +511,7 @@
 				8A979A471424CF9B0012638A /* AudioToolbox.framework */,
 				8A067735142DECF200AB5B24 /* AVFoundation.framework */,
 				8A52D1131424B36E00854CC0 /* CoreGraphics.framework */,
+				8A900F8114352997001C28D3 /* CoreMIDI.framework */,
 				8A52D1111424B36E00854CC0 /* Foundation.framework */,
 				8A52D10F1424B36E00854CC0 /* UIKit.framework */,
 			);

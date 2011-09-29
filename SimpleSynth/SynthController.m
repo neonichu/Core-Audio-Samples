@@ -13,7 +13,14 @@
 @implementation SynthController
 
 @synthesize keyboard;
+@synthesize midiHandler;
 @synthesize session;
+
+- (void)midiNotePlayed:(NSNotification*)notification
+{
+    int notePlayed = [[notification.userInfo objectForKey:kNAMIDI_NoteKey] intValue] % 12;
+    [self.keyboard pressKey:notePlayed];
+}
 
 - (id)init
 {
@@ -29,8 +36,17 @@
         
         [self.session connectSourceNode:self.keyboard busNumber:0 toTargetNode:output busNumber:0];
         [self.session start];
+        
+        midiHandler = [[NAMIDI alloc] init];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(midiNotePlayed:) name:kNAMIDINoteOnNotification 
+                                                   object:nil];
     }
     return self;
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end
