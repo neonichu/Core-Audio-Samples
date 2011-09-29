@@ -13,6 +13,7 @@
 @implementation SynthController
 
 @synthesize keyboard;
+@synthesize levelMeter;
 @synthesize midiHandler;
 @synthesize session;
 
@@ -37,7 +38,10 @@
         [self.session connectSourceNode:self.keyboard busNumber:0 toTargetNode:output busNumber:0];
         [self.session start];
         
-        midiHandler = [[NAMIDI alloc] init];
+        self.levelMeter = [[NALevelMeter alloc] init];
+        [output attachRenderNotifier:self.levelMeter.renderCallback withUserData:(__bridge void*)self.levelMeter];
+        
+        self.midiHandler = [[NAMIDI alloc] init];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(midiNotePlayed:) name:kNAMIDINoteOnNotification 
                                                    object:nil];
     }

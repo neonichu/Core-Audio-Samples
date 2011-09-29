@@ -8,6 +8,8 @@
 
 #import <AudioToolbox/AudioToolbox.h>
 
+#define DBOFFSET				-74.0
+
 @protocol NALevelMeterDelegate
 
 -(void)peakPowerChangedTo:(float)peakPower;

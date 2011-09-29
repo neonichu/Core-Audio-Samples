@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+#import "LevelMeterView.h"
 #import "NNKeyboard.h"
 
 @interface NNKeyboardVC : UIViewController
 
+@property (nonatomic, retain) LevelMeterView* levelMeter;
 @property (nonatomic, assign) NNKeyboard* keyboard;
 
 @end

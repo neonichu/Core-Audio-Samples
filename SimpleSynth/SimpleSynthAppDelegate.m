@@ -24,6 +24,7 @@
     
     self.synthController = [[SynthController alloc] init];
     ((NNKeyboardVC*)self.window.rootViewController).keyboard = self.synthController.keyboard;
+    self.synthController.levelMeter.delegate = ((NNKeyboardVC*)self.window.rootViewController).levelMeter;
     
     return YES;
 }

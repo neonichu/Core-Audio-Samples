@@ -11,12 +11,13 @@
 @implementation NNKeyboardVC
 
 @synthesize keyboard;
+@synthesize levelMeter;
 
 #pragma mark - View lifecycle
 
 - (void)setupButton:(UIButton*)button 
 {
-    [button addTarget:self action:@selector(keyPressed:) forControlEvents:UIControlEventTouchUpInside];
+    [button addTarget:self action:@selector(keyPressed:) forControlEvents:UIControlEventTouchDown];
     [button setBackgroundImage:[UIImage imageNamed:@"ButtonHighlighted"] forState:UIControlStateHighlighted];
 }
 
@@ -56,6 +57,10 @@
                 break;
         }
     }
+    
+    self.levelMeter = [[LevelMeterView alloc] init];
+    self.levelMeter.frame = CGRectMake(824.0, 0.0, 200.0, 200.0);
+    [self.view addSubview:self.levelMeter];
 }
 
 - (void)viewDidUnload

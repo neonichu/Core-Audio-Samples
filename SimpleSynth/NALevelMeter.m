@@ -9,7 +9,6 @@
 
 #import "NALevelMeter.h"
 
-#define DBOFFSET				-74.0
 #define LOWPASSFILTERTIMESLICE	0.001
 
 static OSStatus LevelMeterRenderCallback (void *inRefCon,
