@@ -10,9 +10,22 @@
 
 @implementation NNKeyboardVC
 
+@synthesize documentInteractionController;
 @synthesize keyboard;
 @synthesize levelMeter;
+@synthesize openRecordingButton;
+@synthesize recorder;
 @synthesize synthController;
+
+#pragma mark -
+
++(NSString*)pathToFileInDocumentsDirectoryWithName:(NSString*)name {
+	NSArray* paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+	if ([paths count] < 1) {
+		return name;
+	}
+    return [[paths objectAtIndex:0] stringByAppendingPathComponent:name];
+}
 
 #pragma mark - View lifecycle
 
@@ -80,6 +93,15 @@
     [self addSwitchWithText:@"Effect" actionSelector:@selector(effectSwitchToggled:) atPosition:CGPointMake(50.0, 50.0)];
     [self addSwitchWithText:@"Sine Wave" actionSelector:@selector(sineWaveToggled:) atPosition:CGPointMake(50.0, 90.0)];
     [self addSwitchWithText:@"Record" actionSelector:@selector(recordToggled:) atPosition:CGPointMake(50.0, 130.0)];
+    
+    self.openRecordingButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    self.openRecordingButton.alpha = 0.5;
+    self.openRecordingButton.enabled = NO;
+    self.openRecordingButton.frame = CGRectMake(50.0, 200.0, 150.0, 50.0);
+    [self.openRecordingButton addTarget:self action:@selector(openRecordingClicked:) forControlEvents:UIControlEventTouchUpInside];
+    [self.openRecordingButton setTitle:@"Open Recording" forState:UIControlStateHighlighted];
+    [self.openRecordingButton setTitle:@"Open Recording" forState:UIControlStateNormal];
+    [self.view addSubview:self.openRecordingButton];
 }
 
 - (void)viewDidUnload
@@ -99,9 +121,31 @@
     [self.keyboard pressKey:button.tag];
 }
 
+- (void)openRecordingClicked:(UIButton*)button {
+    NSURL* url = [NSURL fileURLWithPath:[self.recorder pathToRecording]];
+    self.documentInteractionController = [UIDocumentInteractionController interactionControllerWithURL:url];
+    //[self.documentInteractionController presentPreviewAnimated:YES];
+    [self.documentInteractionController presentOpenInMenuFromRect:button.frame inView:self.view animated:YES];
+}
+
 - (void)recordToggled:(UISwitch*)recordSwitch
 {
+    NANode* targetNode = self.synthController.reverbEffect;
     
+    if (recordSwitch.on) {
+        if (!self.recorder) {
+            self.recorder = [[NARecorder alloc] initWithInputFormat:[targetNode outputDescription] 
+                                                         sampleRate:[targetNode outputSampleRate]];
+            [targetNode attachRenderNotifier:self.recorder.renderCallback withUserData:(__bridge void*)self.recorder];
+        }
+            
+        [self.recorder enableRecordingToPath:[[self class] pathToFileInDocumentsDirectoryWithName:@"recording.m4a"]];
+    } else {
+        [self.recorder closeRecording];
+    }
+    
+    self.openRecordingButton.alpha = recordSwitch.on ? 0.5 : 1.0;
+    self.openRecordingButton.enabled = !recordSwitch.on;
 }
 
 - (void)sineWaveToggled:(UISwitch*)sineWaveSwitch

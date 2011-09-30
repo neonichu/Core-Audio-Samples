@@ -9,13 +9,17 @@
 #import <UIKit/UIKit.h>
 
 #import "LevelMeterView.h"
+#import "NARecorder.h"
 #import "NNKeyboard.h"
 #import "SynthController.h"
 
 @interface NNKeyboardVC : UIViewController
 
 @property (nonatomic, retain) LevelMeterView* levelMeter;
+@property (nonatomic, retain) NARecorder* recorder;
 @property (nonatomic, assign) NNKeyboard* keyboard;
 @property (nonatomic, assign) SynthController* synthController;
+@property (nonatomic, assign) UIButton* openRecordingButton;
+@property (nonatomic, retain) UIDocumentInteractionController* documentInteractionController;
 
 @end
