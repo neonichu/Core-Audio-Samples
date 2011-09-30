@@ -22,6 +22,20 @@
     [button setBackgroundImage:[UIImage imageNamed:@"ButtonHighlighted"] forState:UIControlStateHighlighted];
 }
 
+- (void)addSwitchWithText:(NSString*)text actionSelector:(SEL)actionSelector atPosition:(CGPoint)position {
+    UILabel* switchLabel = [[UILabel alloc] initWithFrame:CGRectMake(position.x, position.y, 100.0, 20.0)];
+    switchLabel.backgroundColor = [UIColor clearColor];
+    switchLabel.textColor = [UIColor whiteColor];
+    switchLabel.text = text;
+    [self.view addSubview:switchLabel];
+    
+    UISwitch* switchButton = [[UISwitch alloc] initWithFrame:CGRectMake(position.x + switchLabel.frame.size.width + 10.0, position.y - 5.0, 
+                                                                        switchLabel.frame.size.width, switchLabel.frame.size.height)];
+    switchButton.on = NO;
+    [switchButton addTarget:self action:actionSelector forControlEvents:UIControlEventValueChanged];
+    [self.view addSubview:switchButton];
+}
+
 - (void)loadView
 {
     self.view = [[UIView alloc] init];
@@ -59,22 +73,13 @@
         }
     }
     
-    
     self.levelMeter = [[LevelMeterView alloc] init];
     self.levelMeter.frame = CGRectMake(824.0, 0.0, 200.0, 200.0);
     [self.view addSubview:self.levelMeter];
     
-    
-    UILabel* effectSwitchLabel = [[UILabel alloc] initWithFrame:CGRectMake(50.0, 50.0, 50.0, 20.0)];
-    effectSwitchLabel.backgroundColor = [UIColor clearColor];
-    effectSwitchLabel.textColor = [UIColor whiteColor];
-    effectSwitchLabel.text = @"Effect";
-    [self.view addSubview:effectSwitchLabel];
-    
-    UISwitch* effectSwitch = [[UISwitch alloc] initWithFrame:CGRectMake(110.0, 45.0, 50.0, 20.0)];
-    effectSwitch.on = NO;
-    [effectSwitch addTarget:self action:@selector(effectSwitchToggled:) forControlEvents:UIControlEventValueChanged];
-    [self.view addSubview:effectSwitch];
+    [self addSwitchWithText:@"Effect" actionSelector:@selector(effectSwitchToggled:) atPosition:CGPointMake(50.0, 50.0)];
+    [self addSwitchWithText:@"Sine Wave" actionSelector:@selector(sineWaveToggled:) atPosition:CGPointMake(50.0, 90.0)];
+    [self addSwitchWithText:@"Record" actionSelector:@selector(recordToggled:) atPosition:CGPointMake(50.0, 130.0)];
 }
 
 - (void)viewDidUnload
@@ -92,6 +97,16 @@
 - (void)keyPressed:(UIButton*)button
 {
     [self.keyboard pressKey:button.tag];
+}
+
+- (void)recordToggled:(UISwitch*)recordSwitch
+{
+    
+}
+
+- (void)sineWaveToggled:(UISwitch*)sineWaveSwitch
+{
+    
 }
 
 #pragma mark - Rotation
