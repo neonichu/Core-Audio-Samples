@@ -18,4 +18,6 @@
 @property (nonatomic, retain) NASession* session;
 @property (nonatomic, retain) NASineWave* sineWave;
 
+-(void)switchSynthInputNodeToNode:(NANode*)node;
+
 @end

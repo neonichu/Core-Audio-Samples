@@ -124,7 +124,7 @@
 - (void)keyPressed:(UIButton*)button
 {
     if (self.sineWaveSwitch.on) {
-        self.synthController.sineWave.frequency = button.tag * 100 + 10;
+        self.synthController.sineWave.frequency = button.tag < 100 ? (button.tag + 4) * 100 : button.tag * 10;
         [self.synthController.sineWave play];
     } else {
         [self.keyboard pressKey:button.tag];
@@ -158,9 +158,13 @@
     self.openRecordingButton.enabled = !recordSwitch.on;
 }
 
-- (void)sineWaveToggled:(UISwitch*)sineWaveSwitch
+- (void)sineWaveToggled:(UISwitch*)_sineWaveSwitch
 {
-    
+    if (_sineWaveSwitch.on) {
+        [self.synthController switchSynthInputNodeToNode:self.synthController.sineWave];
+    } else {
+        [self.synthController switchSynthInputNodeToNode:self.synthController.keyboard];
+    }
 }
 
 #pragma mark - Rotation

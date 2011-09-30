@@ -15,7 +15,7 @@ static void	MyMIDIReadProc(const MIDIPacketList *pktlist, void *refCon, void *co
 	MIDIPacket *packet = (MIDIPacket *)pktlist->packet;	
 	Byte midiCommand = packet->data[0] >> 4;
     
-	if (midiCommand == 0x09) { // Note On Event
+	if (midiCommand == 0x09) { // "Note On" Event
 		Byte note = packet->data[1] & 0x7F;
 		Byte velocity = packet->data[2] & 0x7F;
         
@@ -45,11 +45,11 @@ static void MyMIDINotifyProc (const MIDINotification  *message, void *refCon) {
 	unsigned long sourceCount = MIDIGetNumberOfSources();
 	for (int i = 0; i < sourceCount; ++i) {
 		MIDIEndpointRef src = MIDIGetSource(i);
-		CFStringRef endpointName = NULL;
+		/*CFStringRef endpointName = NULL;
 		OSStatus nameErr = MIDIObjectGetStringProperty(src, kMIDIPropertyName, &endpointName);
 		if (noErr == nameErr) {
             NSLog(@"MIDI source %d: %@", i, endpointName);
-		}
+		}*/
 		MIDIPortConnectSource(inPort, src, NULL);
 	}
 }

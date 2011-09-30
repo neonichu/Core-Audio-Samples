@@ -25,6 +25,13 @@
     [self.keyboard pressKey:notePlayed];
 }
 
+-(void)switchSynthInputNodeToNode:(NANode*)node
+{
+    [self.session stop];
+    self.reverbEffect.inputNode = node;
+    [self.session start];
+}
+
 - (id)init
 {
     self = [super init];
@@ -43,8 +50,7 @@
         NARemoteIO* output = [[NARemoteIO alloc] init];
         [self.session addNode:output];
         
-        //self.reverbEffect.inputNode = self.keyboard;
-        self.reverbEffect.inputNode = self.sineWave;
+        self.reverbEffect.inputNode = self.keyboard;
         [self.session connectSourceNode:self.reverbEffect busNumber:0 toTargetNode:output busNumber:0];
         [self.session start];
         
