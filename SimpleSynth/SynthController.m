@@ -15,6 +15,7 @@
 @synthesize keyboard;
 @synthesize levelMeter;
 @synthesize midiHandler;
+@synthesize reverbEffect;
 @synthesize session;
 
 - (void)midiNotePlayed:(NSNotification*)notification
@@ -32,10 +33,14 @@
         self.keyboard = [[NNKeyboard alloc] initWithSampleRate:self.session.graphSampleRate];
         [session addNode:self.keyboard];
         
+        self.reverbEffect = [[NAReverbEffect alloc] init];
+        [session addNode:self.reverbEffect];
+        
         NARemoteIO* output = [[NARemoteIO alloc] init];
         [self.session addNode:output];
         
-        [self.session connectSourceNode:self.keyboard busNumber:0 toTargetNode:output busNumber:0];
+        self.reverbEffect.inputNode = self.keyboard;
+        [self.session connectSourceNode:self.reverbEffect busNumber:0 toTargetNode:output busNumber:0];
         [self.session start];
         
         self.levelMeter = [[NALevelMeter alloc] init];

@@ -6,11 +6,14 @@
 //  Copyright 2011 - All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "NANode.h"
 
-@interface NAReverbEffect : NSObject
+@interface NAReverbEffect : NANode
 
 @property (nonatomic, assign) float cutoff;
 @property (nonatomic, assign) float resonance;
+@property (nonatomic, assign) float sineFrequency;
+
+@property (nonatomic, retain) NANode* inputNode;
 
 @end

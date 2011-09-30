@@ -14,6 +14,7 @@
 @property (nonatomic, retain) NNKeyboard* keyboard;
 @property (nonatomic, retain) NALevelMeter* levelMeter;
 @property (nonatomic, retain) NAMIDI* midiHandler;
+@property (nonatomic, retain) NAReverbEffect* reverbEffect;
 @property (nonatomic, retain) NASession* session;
 
 @end

@@ -8,6 +8,7 @@
 //
 
 #import "NAReverbEffect.h"
+#import "NNAudio.h"
 
 static const float kSampleRate = 44100.0f;
 static const float kE = 2.71828183f;
@@ -17,12 +18,13 @@ static const float kE = 2.71828183f;
 @interface NAReverbEffect ()
 
 @property (nonatomic, assign) float oldx, oldy1, oldy2, oldy3, y1, y2, y3, y4;
+@property (nonatomic, assign) float sinePhase;
 
 @end
 
 #pragma mark -
 
-static float filter_audio(NAReverbEffect* effect, float x) {
+/*static float filter_audio(NAReverbEffect* effect, float x) {
     float f = 2.0f * effect.cutoff / kSampleRate;
     float k = 3.6f * f - 1.6f * f * f - 1;
     float p = (k + 1.0f) * 0.5f;
@@ -41,21 +43,71 @@ static float filter_audio(NAReverbEffect* effect, float x) {
     effect.oldy3 = effect.y3;
     
     return result;
+}*/
+
+static float filter_audio(NAReverbEffect* effect, float x) 
+{    
+    float theta = effect.sinePhase * M_PI * 2;
+    
+    x = (sin(theta) * x);
+    
+    effect.sinePhase += 1.0 / (kSampleRate / effect.sineFrequency);
+    if (effect.sinePhase > 1.0) {
+        effect.sinePhase -= 1.0;
+    }
+    
+    return x;
+}
+
+static OSStatus RenderCallback (
+                         void *							inRefCon,
+                         AudioUnitRenderActionFlags *	ioActionFlags,
+                         const AudioTimeStamp *			inTimeStamp,
+                         UInt32							inBusNumber,
+                         UInt32							inNumberFrames,
+                         AudioBufferList *				ioData)
+{	
+	NAReverbEffect* effect = (__bridge NAReverbEffect*) inRefCon;
+	
+	OSStatus renderErr = AudioUnitRender(effect.inputNode.unit,
+										 ioActionFlags,
+										 inTimeStamp,
+										 0,
+										 inNumberFrames,
+										 ioData);
+	[NAUtils printErrorMessage:@"AudioUnitRender" withStatus:renderErr];
+    
+    for (int buffer = 0; buffer < ioData->mNumberBuffers; buffer++) {
+        AudioUnitSampleType* audio = (AudioUnitSampleType*)ioData->mBuffers[buffer].mData;
+        for (int frame = 0; frame < inNumberFrames; frame++) {
+            float sample = (float)audio[frame] / (float)16777216L;
+            sample = filter_audio(effect, sample);
+            audio[frame] = sample * 16777216L;
+        }
+    }
+	
+	return noErr;
 }
 
 @implementation NAReverbEffect
 
 @synthesize cutoff, resonance;
 @synthesize oldx, oldy1, oldy2, oldy3, y1, y2, y3, y4;
+@synthesize inputNode;
+@synthesize sineFrequency, sinePhase;
 
-- (id)init
-{
-    self = [super init];
-    if (self) {
-        // Initialization code here.
-    }
+-(void)initializeUnitForGraph:(AUGraph)graph {
+	[super initializeUnitForGraph:graph];
+	
+    if (self.sineFrequency == 0) self.sineFrequency = 23.0;
+    self.sinePhase = 0.0;
     
-    return self;
+	[self attachInputCallback:RenderCallback toBus:0 inGraph:graph];
+}
+
+-(id)init {
+	self = [super initWithComponentType:kAudioUnitType_Effect andComponentSubType:kAudioUnitSubType_AUiPodEQ];
+	return self;
 }
 
 @end
