@@ -12,6 +12,7 @@
 
 @synthesize keyboard;
 @synthesize levelMeter;
+@synthesize synthController;
 
 #pragma mark - View lifecycle
 
@@ -58,9 +59,22 @@
         }
     }
     
+    
     self.levelMeter = [[LevelMeterView alloc] init];
     self.levelMeter.frame = CGRectMake(824.0, 0.0, 200.0, 200.0);
     [self.view addSubview:self.levelMeter];
+    
+    
+    UILabel* effectSwitchLabel = [[UILabel alloc] initWithFrame:CGRectMake(50.0, 50.0, 50.0, 20.0)];
+    effectSwitchLabel.backgroundColor = [UIColor clearColor];
+    effectSwitchLabel.textColor = [UIColor whiteColor];
+    effectSwitchLabel.text = @"Effect";
+    [self.view addSubview:effectSwitchLabel];
+    
+    UISwitch* effectSwitch = [[UISwitch alloc] initWithFrame:CGRectMake(110.0, 45.0, 50.0, 20.0)];
+    effectSwitch.on = NO;
+    [effectSwitch addTarget:self action:@selector(effectSwitchToggled:) forControlEvents:UIControlEventValueChanged];
+    [self.view addSubview:effectSwitch];
 }
 
 - (void)viewDidUnload
@@ -69,6 +83,11 @@
 }
 
 #pragma mark - Actions
+
+- (void)effectSwitchToggled:(UISwitch*)effectSwitch 
+{
+    self.synthController.reverbEffect.active = effectSwitch.on;
+}
 
 - (void)keyPressed:(UIButton*)button
 {

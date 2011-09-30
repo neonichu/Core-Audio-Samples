@@ -10,6 +10,8 @@
 
 @interface NAReverbEffect : NANode
 
+@property (nonatomic, assign) BOOL active;
+
 @property (nonatomic, assign) float cutoff;
 @property (nonatomic, assign) float resonance;
 @property (nonatomic, assign) float sineFrequency;

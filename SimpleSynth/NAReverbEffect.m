@@ -77,6 +77,10 @@ static OSStatus RenderCallback (
 										 ioData);
 	[NAUtils printErrorMessage:@"AudioUnitRender" withStatus:renderErr];
     
+    if (!effect.active) {
+        return noErr;
+    }
+    
     for (int buffer = 0; buffer < ioData->mNumberBuffers; buffer++) {
         AudioUnitSampleType* audio = (AudioUnitSampleType*)ioData->mBuffers[buffer].mData;
         for (int frame = 0; frame < inNumberFrames; frame++) {
@@ -93,12 +97,17 @@ static OSStatus RenderCallback (
 
 @synthesize cutoff, resonance;
 @synthesize oldx, oldy1, oldy2, oldy3, y1, y2, y3, y4;
-@synthesize inputNode;
+
 @synthesize sineFrequency, sinePhase;
+
+@synthesize active;
+@synthesize inputNode;
 
 -(void)initializeUnitForGraph:(AUGraph)graph {
 	[super initializeUnitForGraph:graph];
 	
+    self.active = NO;
+    
     if (self.sineFrequency == 0) self.sineFrequency = 23.0;
     self.sinePhase = 0.0;
     

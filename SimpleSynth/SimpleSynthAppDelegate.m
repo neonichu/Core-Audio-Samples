@@ -19,12 +19,15 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self.window makeKeyAndVisible];
     
-    self.window.rootViewController = [[NNKeyboardVC alloc] init];
+    NNKeyboardVC* keyboardVC = [[NNKeyboardVC alloc] init];
+    self.window.rootViewController = keyboardVC;
     self.window.rootViewController.view.frame = [[UIScreen mainScreen] applicationFrame];
     
     self.synthController = [[SynthController alloc] init];
-    ((NNKeyboardVC*)self.window.rootViewController).keyboard = self.synthController.keyboard;
-    self.synthController.levelMeter.delegate = ((NNKeyboardVC*)self.window.rootViewController).levelMeter;
+    
+    keyboardVC.keyboard = self.synthController.keyboard;
+    keyboardVC.synthController = self.synthController;
+    self.synthController.levelMeter.delegate = keyboardVC.levelMeter;
     
     return YES;
 }
