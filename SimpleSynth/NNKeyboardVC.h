@@ -21,5 +21,6 @@
 @property (nonatomic, assign) SynthController* synthController;
 @property (nonatomic, assign) UIButton* openRecordingButton;
 @property (nonatomic, retain) UIDocumentInteractionController* documentInteractionController;
+@property (nonatomic, retain) UISwitch* sineWaveSwitch;
 
 @end

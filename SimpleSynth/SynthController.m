@@ -17,6 +17,7 @@
 @synthesize midiHandler;
 @synthesize reverbEffect;
 @synthesize session;
+@synthesize sineWave;
 
 - (void)midiNotePlayed:(NSNotification*)notification
 {
@@ -33,13 +34,17 @@
         self.keyboard = [[NNKeyboard alloc] initWithSampleRate:self.session.graphSampleRate];
         [session addNode:self.keyboard];
         
+        self.sineWave = [[NASineWave alloc] init];
+        [session addNode:self.sineWave];
+        
         self.reverbEffect = [[NAReverbEffect alloc] init];
         [session addNode:self.reverbEffect];
         
         NARemoteIO* output = [[NARemoteIO alloc] init];
         [self.session addNode:output];
         
-        self.reverbEffect.inputNode = self.keyboard;
+        //self.reverbEffect.inputNode = self.keyboard;
+        self.reverbEffect.inputNode = self.sineWave;
         [self.session connectSourceNode:self.reverbEffect busNumber:0 toTargetNode:output busNumber:0];
         [self.session start];
         

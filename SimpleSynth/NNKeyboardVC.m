@@ -15,6 +15,7 @@
 @synthesize levelMeter;
 @synthesize openRecordingButton;
 @synthesize recorder;
+@synthesize sineWaveSwitch;
 @synthesize synthController;
 
 #pragma mark -
@@ -35,7 +36,7 @@
     [button setBackgroundImage:[UIImage imageNamed:@"ButtonHighlighted"] forState:UIControlStateHighlighted];
 }
 
-- (void)addSwitchWithText:(NSString*)text actionSelector:(SEL)actionSelector atPosition:(CGPoint)position {
+- (UISwitch*)addSwitchWithText:(NSString*)text actionSelector:(SEL)actionSelector atPosition:(CGPoint)position {
     UILabel* switchLabel = [[UILabel alloc] initWithFrame:CGRectMake(position.x, position.y, 100.0, 20.0)];
     switchLabel.backgroundColor = [UIColor clearColor];
     switchLabel.textColor = [UIColor whiteColor];
@@ -47,6 +48,8 @@
     switchButton.on = NO;
     [switchButton addTarget:self action:actionSelector forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:switchButton];
+    
+    return switchButton;
 }
 
 - (void)loadView
@@ -90,8 +93,10 @@
     self.levelMeter.frame = CGRectMake(824.0, 0.0, 200.0, 200.0);
     [self.view addSubview:self.levelMeter];
     
+    self.sineWaveSwitch = [self addSwitchWithText:@"Sine Wave" actionSelector:@selector(sineWaveToggled:)
+                                       atPosition:CGPointMake(50.0, 90.0)];
+    
     [self addSwitchWithText:@"Effect" actionSelector:@selector(effectSwitchToggled:) atPosition:CGPointMake(50.0, 50.0)];
-    [self addSwitchWithText:@"Sine Wave" actionSelector:@selector(sineWaveToggled:) atPosition:CGPointMake(50.0, 90.0)];
     [self addSwitchWithText:@"Record" actionSelector:@selector(recordToggled:) atPosition:CGPointMake(50.0, 130.0)];
     
     self.openRecordingButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
@@ -118,7 +123,12 @@
 
 - (void)keyPressed:(UIButton*)button
 {
-    [self.keyboard pressKey:button.tag];
+    if (self.sineWaveSwitch.on) {
+        self.synthController.sineWave.frequency = button.tag * 100 + 10;
+        [self.synthController.sineWave play];
+    } else {
+        [self.keyboard pressKey:button.tag];
+    }
 }
 
 - (void)openRecordingClicked:(UIButton*)button {

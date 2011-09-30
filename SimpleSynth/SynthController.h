@@ -16,5 +16,6 @@
 @property (nonatomic, retain) NAMIDI* midiHandler;
 @property (nonatomic, retain) NAReverbEffect* reverbEffect;
 @property (nonatomic, retain) NASession* session;
+@property (nonatomic, retain) NASineWave* sineWave;
 
 @end
