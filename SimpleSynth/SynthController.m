@@ -22,7 +22,13 @@
 - (void)midiNotePlayed:(NSNotification*)notification
 {
     int notePlayed = [[notification.userInfo objectForKey:kNAMIDI_NoteKey] intValue] % 12;
-    [self.keyboard pressKey:notePlayed];
+    
+    if (self.reverbEffect.inputNode == self.keyboard) {
+        [self.keyboard pressKey:notePlayed];
+    } else {
+        self.sineWave.frequency = (notePlayed + 4) * 100;
+        [self.sineWave play];
+    }
 }
 
 -(void)switchSynthInputNodeToNode:(NANode*)node
