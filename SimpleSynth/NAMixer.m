@@ -317,7 +317,7 @@ static OSStatus inputRenderCallback (
 #pragma mark -
 
 -(NSString*)description {
-	return [NSString stringWithFormat:@"Mixer Unit (Node: %d, Unit: %d)", self.node, self.unit];
+	return [NSString stringWithFormat:@"Mixer Unit (Node: %ld, Unit: %d)", self.node, (int)self.unit];
 }
 
 @end

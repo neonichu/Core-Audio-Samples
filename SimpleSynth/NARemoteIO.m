@@ -21,7 +21,7 @@
 #pragma mark -
 
 -(NSString*)description {
-	return [NSString stringWithFormat:@"I/O Unit (Node: %d, Unit: %d)", self.node, self.unit];
+	return [NSString stringWithFormat:@"I/O Unit (Node: %ld, Unit: %d)", self.node, (int)self.unit];
 }
 
 @end

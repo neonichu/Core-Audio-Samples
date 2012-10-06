@@ -193,7 +193,7 @@ static void audioRouteChangeListenerCallback (
 											   nodeConnection.destInputNumber
 											   );
 	
-	NSString* errorMessage = [NSString stringWithFormat:@"AUGraphConnectNodeInput: from %d to %d", 
+	NSString* errorMessage = [NSString stringWithFormat:@"AUGraphConnectNodeInput: from %ld to %ld", 
 							  nodeConnection.sourceNode, nodeConnection.destNode];
 	return ![NAUtils printErrorMessage:errorMessage withStatus:result];
 }

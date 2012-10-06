@@ -138,7 +138,6 @@
 		8A52D1101424B36E00854CC0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A52D10F1424B36E00854CC0 /* UIKit.framework */; };
 		8A52D1121424B36E00854CC0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A52D1111424B36E00854CC0 /* Foundation.framework */; };
 		8A52D1141424B36E00854CC0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A52D1131424B36E00854CC0 /* CoreGraphics.framework */; };
-		8A52D11A1424B36E00854CC0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8A52D1181424B36E00854CC0 /* InfoPlist.strings */; };
 		8A52D11C1424B36E00854CC0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A52D11B1424B36E00854CC0 /* main.m */; };
 		8A52D1201424B36E00854CC0 /* SimpleSynthAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A52D11F1424B36E00854CC0 /* SimpleSynthAppDelegate.m */; };
 		8A52D12A1424B79B00854CC0 /* NNKeyboardVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A52D1291424B79B00854CC0 /* NNKeyboardVC.m */; };
@@ -155,6 +154,7 @@
 		8A52D1541424C9DB00854CC0 /* NAMIDI.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A52D1531424C9DB00854CC0 /* NAMIDI.m */; };
 		8A52D1571424C9F000854CC0 /* NARecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A52D1561424C9F000854CC0 /* NARecorder.m */; };
 		8A52D15A1424C9FC00854CC0 /* NAUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A52D1591424C9FC00854CC0 /* NAUtils.m */; };
+		8A58A92116208D94008A5229 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A58A92016208D94008A5229 /* Default-568h@2x.png */; };
 		8A900F8214352997001C28D3 /* CoreMIDI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A900F8114352997001C28D3 /* CoreMIDI.framework */; };
 		8A900F8614352F2F001C28D3 /* LevelMeterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A900F8514352F2F001C28D3 /* LevelMeterView.m */; };
 		8A979A481424CF9B0012638A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A979A471424CF9B0012638A /* AudioToolbox.framework */; };
@@ -296,7 +296,6 @@
 		8A52D1111424B36E00854CC0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8A52D1131424B36E00854CC0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		8A52D1171424B36E00854CC0 /* SimpleSynth-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SimpleSynth-Info.plist"; sourceTree = "<group>"; };
-		8A52D1191424B36E00854CC0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8A52D11B1424B36E00854CC0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = main.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		8A52D11D1424B36E00854CC0 /* SimpleSynth-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimpleSynth-Prefix.pch"; sourceTree = "<group>"; };
 		8A52D11E1424B36E00854CC0 /* SimpleSynthAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = SimpleSynthAppDelegate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -328,6 +327,7 @@
 		8A52D1561424C9F000854CC0 /* NARecorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NARecorder.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		8A52D1581424C9FC00854CC0 /* NAUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = NAUtils.h; sourceTree = "<group>"; };
 		8A52D1591424C9FC00854CC0 /* NAUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = NAUtils.m; sourceTree = "<group>"; };
+		8A58A92016208D94008A5229 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		8A900F8114352997001C28D3 /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = System/Library/Frameworks/CoreMIDI.framework; sourceTree = SDKROOT; };
 		8A900F8414352F2F001C28D3 /* LevelMeterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelMeterView.h; sourceTree = "<group>"; };
 		8A900F8514352F2F001C28D3 /* LevelMeterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelMeterView.m; sourceTree = "<group>"; };
@@ -494,6 +494,7 @@
 		8A52D1001424B36D00854CC0 = {
 			isa = PBXGroup;
 			children = (
+				8A58A92016208D94008A5229 /* Default-568h@2x.png */,
 				8A52D1151424B36E00854CC0 /* SimpleSynth */,
 				8A52D10E1424B36E00854CC0 /* Frameworks */,
 				8A52D10C1424B36E00854CC0 /* Products */,
@@ -545,7 +546,6 @@
 			isa = PBXGroup;
 			children = (
 				8A52D1171424B36E00854CC0 /* SimpleSynth-Info.plist */,
-				8A52D1181424B36E00854CC0 /* InfoPlist.strings */,
 				8A52D11B1424B36E00854CC0 /* main.m */,
 				8A52D11D1424B36E00854CC0 /* SimpleSynth-Prefix.pch */,
 			);
@@ -636,7 +636,7 @@
 		8A52D1021424B36D00854CC0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0420;
+				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Extessy AG";
 			};
 			buildConfigurationList = 8A52D1051424B36D00854CC0 /* Build configuration list for PBXProject "SimpleSynth" */;
@@ -661,7 +661,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A52D11A1424B36E00854CC0 /* InfoPlist.strings in Resources */,
 				8A52D1301424C4DF00854CC0 /* ButtonHighlighted.png in Resources */,
 				8A0677B9142E133900AB5B24 /* FluidR3_GM-1.caf in Resources */,
 				8A0677BA142E133900AB5B24 /* FluidR3_GM-2.caf in Resources */,
@@ -790,6 +789,7 @@
 				8A067835142E133900AB5B24 /* FluidR3_GM-125.caf in Resources */,
 				8A067836142E133900AB5B24 /* FluidR3_GM-126.caf in Resources */,
 				8A067837142E133900AB5B24 /* FluidR3_GM-127.caf in Resources */,
+				8A58A92116208D94008A5229 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -823,17 +823,6 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		8A52D1181424B36E00854CC0 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8A52D1191424B36E00854CC0 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		8A52D1211424B36E00854CC0 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -851,6 +840,7 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -870,6 +860,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
